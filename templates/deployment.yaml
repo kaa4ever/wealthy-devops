@@ -18,3 +18,5 @@ spec:
         name: wealthy-backend
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: argocd/dockerhub-secret
