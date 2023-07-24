@@ -14,7 +14,7 @@ spec:
         app: wealthy-backend
     spec:
       containers:
-      - image: kaa4ever2/wealthy-backend:latest
+      - image: kaa4ever2/wealthy-backend:develop
         name: wealthy-backend
         ports:
         - containerPort: 80
