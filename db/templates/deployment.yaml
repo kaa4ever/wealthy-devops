@@ -18,3 +18,6 @@ spec:
         name: wealthy-db
         ports:
         - containerPort: 5432
+        env:
+        - name: POSTGRES_PASSWORD
+          value: example
