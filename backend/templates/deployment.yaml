@@ -18,5 +18,6 @@ spec:
         name: wealthy-backend
         ports:
         - containerPort: 80
-      imagePullSecrets:
-        - name: regcred
+        env:
+        - name: SQLALCHEMY_DATABASE_URL
+          value: "postgresql://postgres:example@wealthy-db/wealthy"

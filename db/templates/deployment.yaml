@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wealthy-db
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: wealthy-db
+  template:
+    metadata:
+      labels:
+        app: wealthy-db
+    spec:
+      containers:
+      - image: postgres
+        name: wealthy-db
+        ports:
+        - containerPort: 5432
