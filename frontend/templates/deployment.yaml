@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wealthy-frontend
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: wealthy-frontend
+  template:
+    metadata:
+      labels:
+        app: wealthy-frontend
+    spec:
+      containers:
+      - image: kaa4ever2/wealthy-frontend@sha256:8bb090d5c5f46eac1f1c939b0232af4d03cdbb16504e1ce89646b6307627a6f2
+        name: wealthy-frontend
+        ports:
+        - containerPort: 80
