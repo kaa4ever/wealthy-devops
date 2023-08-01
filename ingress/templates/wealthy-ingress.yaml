@@ -11,6 +11,6 @@ spec:
           path: "/"
           backend:
             service:
-              name: wealthy-backend
+              name: wealthy-frontend
               port:
                 number: 80
