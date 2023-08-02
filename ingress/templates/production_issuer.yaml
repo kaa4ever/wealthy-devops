@@ -9,6 +9,8 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod-private-key
     solvers:
-    - http01:
-        ingress:
-          class: nginx
+    - dns01:
+        digitalocean:
+          tokenSecretRef:
+            name: digitalocean-dns
+            key: access-token
