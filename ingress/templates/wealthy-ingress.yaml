@@ -2,15 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wealthy-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: wealthy.roadking.io
     http:
-        paths:
-        - pathType: Prefix
-          path: "/"
-          backend:
-            service:
-              name: wealthy-frontend
-              port:
-                number: 80
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: wealthy-frontend
+            port:
+              number: 80
