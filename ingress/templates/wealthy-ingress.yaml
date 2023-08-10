@@ -9,6 +9,7 @@ spec:
   tls:
   - hosts:
     - wealthy.roadking.io
+    - wealthy-backend.roadking.io
     secretName: wealthy-tls
   rules:
   - host: wealthy.roadking.io
@@ -21,3 +22,14 @@ spec:
             name: wealthy-frontend
             port:
               number: 80
+  - host: wealthy-backend.roadking.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: wealthy-backend
+            port:
+              number: 80
+
