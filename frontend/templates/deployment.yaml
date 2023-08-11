@@ -14,10 +14,7 @@ spec:
         app: wealthy-frontend
     spec:
       containers:
-      - image: kaa4ever2/wealthy-frontend@sha256:abd839aa8cad2d0c8778b99449ed4e821da197fd701f0c5ffd08bd47e6bc0523
+      - image: kaa4ever2/wealthy-frontend@sha256:c0beb01b24e39fca25ad20110ca7160c9e2f0203a8731bcfd242d1232098388b
         name: wealthy-frontend
         ports:
         - containerPort: 80
-        env:
-        - name: REACT_APP_API_BACKEND
-          value: whatisthis
