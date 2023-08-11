@@ -14,7 +14,7 @@ spec:
         app: wealthy-frontend
     spec:
       containers:
-      - image: kaa4ever2/wealthy-frontend@sha256:3450a6b16b6e879903b173c7363d567b4d13c2494d4d22ddad281c7c59e981af
+      - image: kaa4ever2/wealthy-frontend@sha256:abd839aa8cad2d0c8778b99449ed4e821da197fd701f0c5ffd08bd47e6bc0523
         name: wealthy-frontend
         ports:
         - containerPort: 80
